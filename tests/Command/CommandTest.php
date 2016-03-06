@@ -3,8 +3,9 @@
 namespace Tests\Candeias\Users\Command;
 
 use DateTime;
-use Candeias\Users\Command\Command;
+use Tests\Candeias\Users\Support;
 use Candeias\Users\Entity\User;
+use Candeias\Users\Command\Command;
 
 class CommandTest extends \PHPUnit_Framework_TestCase
 {
@@ -32,7 +33,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
             [
                 'register',
                 new DateTime,
-                new User,
+                Support\UserFactory::create(),
                 [
                     'username' => 'user',
                     'password' => 'pass',
