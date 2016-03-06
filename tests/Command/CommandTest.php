@@ -31,7 +31,16 @@ class CommandTest extends \PHPUnit_Framework_TestCase
     {
         return [
             [
-                'register',
+                'create',
+                new DateTime,
+                Support\UserFactory::createAnonymous(),
+                [
+                    'username' => 'user',
+                    'password' => 'pass',
+                ],
+            ],
+            [
+                'update',
                 new DateTime,
                 Support\UserFactory::create(),
                 [
