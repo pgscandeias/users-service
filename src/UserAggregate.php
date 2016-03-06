@@ -30,7 +30,7 @@ class UserAggregate
             new Event(
                 Event::REGISTERED,
                 $command->getTime(),
-                $command->getUser()
+                $command->getToken()
             ),
         ];
     }

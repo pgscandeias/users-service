@@ -13,7 +13,7 @@ class CommandFactory
         return new Command\Command(
             @$values['type'],
             @$values['time'] ?: new DateTime,
-            @$values['user'] ?: UserFactory::create(),
+            @$values['user'] ?: TokenFactory::create(),
             @$values['data'] ?: []
         );
     }

@@ -3,7 +3,7 @@
 namespace Candeias\Users\Common;
 
 use DateTime;
-use Candeias\Users\Entity\User;
+use Candeias\Users\Security\Token;
 
 abstract class DTO
 {
@@ -18,9 +18,9 @@ abstract class DTO
     protected $time;
 
     /**
-     * @var User
+     * @var Token
      */
-    protected $user;
+    protected $token;
 
     /**
      * @var array
@@ -30,18 +30,18 @@ abstract class DTO
     /**
      * @param string   $type
      * @param DateTime $time
-     * @param User     $user
+     * @param Token     $token
      * @param array    $data
      */
     public function __construct(
         $type,
         DateTime $time,
-        User $user,
+        Token $token,
         array $data = []
     ) {
         $this->type = $type;
         $this->time = $time;
-        $this->user = $user;
+        $this->token = $token;
         $this->data = $data;
     }
 
@@ -55,9 +55,9 @@ abstract class DTO
         return $this->time;
     }
 
-    public function getUser()
+    public function getToken()
     {
-        return $this->user;
+        return $this->token;
     }
 
     public function getData()

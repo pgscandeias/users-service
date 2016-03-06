@@ -2,18 +2,18 @@
 
 namespace Tests\Candeias\Users\Support;
 
-use Candeias\Users\Entity\AnonymousUser;
-use Candeias\Users\Entity\User;
+use Candeias\Users\Security\AnonymousToken;
+use Candeias\Users\Security\Token;
 
 class TokenFactory
 {
     public static function create()
     {
-        return new User('user');
+        return new Token('user');
     }
 
     public static function createAnonymous()
     {
-        return new AnonymousUser('anonymous');
+        return new AnonymousToken('anonymous');
     }
 }

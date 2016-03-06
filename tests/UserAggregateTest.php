@@ -49,7 +49,7 @@ class UserAggregateTest extends \PHPUnit_Framework_TestCase
         // Also, our aggregate should now hold a User
         $user = $aggregate->getEntity();
         $this->assertInstanceOf(User::class, $user);
-        // If one of the properties made it through, we're good
+        // If one of the properties made it from command to user, we're good
         $this->assertEquals($command->get('username'), $user->getUsername());
     }
 
