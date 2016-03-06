@@ -7,6 +7,9 @@ use Candeias\Users\Entity\User;
 
 class Command
 {
+    const REGISTER = 'register';
+    const UPDATE = 'update';
+
     /**
      * @var string
      */
