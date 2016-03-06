@@ -9,11 +9,11 @@ class UserFactory
 {
     public static function create()
     {
-        return new User;
+        return new User('user');
     }
 
     public static function createAnonymous()
     {
-        return new AnonymousUser;
+        return new AnonymousUser('anonymous');
     }
 }

@@ -19,6 +19,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($type, $command->getType());
         $this->assertEquals($time, $command->getTime());
         $this->assertEquals($user, $command->getUser());
+        $this->assertEquals($data, $command->getData());
 
         foreach ($data as $key => $value) {
             $this->assertEquals($value, $command->get($key));

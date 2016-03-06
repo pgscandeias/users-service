@@ -1,14 +1,13 @@
 <?php
 
-namespace Candeias\Users\Command;
+namespace Candeias\Users\Event;
 
 use DateTime;
 use Candeias\Users\Entity\User;
 
-class Command
+class Event
 {
-    const REGISTER = 'register';
-    const UPDATE = 'update';
+    const REGISTERED = 'registered';
 
     /**
      * @var string
