@@ -23,7 +23,7 @@ class UserAggregate
 
     public function register(Command\Command $command)
     {
-        $this->user = Entity\User::fromArray($command->getData());
+        $this->user = Entity\User::fromArray($command->getPayload());
         $this->validator->validate($this->user, $command->getType());
 
         return [

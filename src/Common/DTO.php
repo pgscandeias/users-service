@@ -25,24 +25,24 @@ abstract class DTO
     /**
      * @var array
      */
-    protected $data;
+    protected $payload;
 
     /**
      * @param string   $type
      * @param DateTime $time
-     * @param Token     $token
-     * @param array    $data
+     * @param Token    $token
+     * @param array    $payload
      */
     public function __construct(
         $type,
         DateTime $time,
         Token $token,
-        array $data = []
+        array $payload = []
     ) {
         $this->type = $type;
         $this->time = $time;
         $this->token = $token;
-        $this->data = $data;
+        $this->payload = $payload;
     }
 
     public function getType()
@@ -60,15 +60,26 @@ abstract class DTO
         return $this->token;
     }
 
-    public function getData()
+    /**
+     * Get an array of all the payload
+     *
+     * @return array
+     */
+    public function getPayload()
     {
-        return $this->data;
+        return $this->payload;
     }
 
+    /**
+     * Get only a single piece of payload, identified by its key
+     *
+     * @param  string $key
+     * @return mixed
+     */
     public function get($key)
     {
-        return isset($this->data[$key]) ?
-            $this->data[$key] :
+        return isset($this->payload[$key]) ?
+            $this->payload[$key] :
             null
         ;
     }

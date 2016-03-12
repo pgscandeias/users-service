@@ -12,16 +12,16 @@ class CommandTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider commandProvider
      */
-    public function testCommand($type, DateTime $time, Token $user, array $data)
+    public function testCommand($type, DateTime $time, Token $user, array $payload)
     {
-        $command = new Command($type, $time, $user, $data);
+        $command = new Command($type, $time, $user, $payload);
 
         $this->assertEquals($type, $command->getType());
         $this->assertEquals($time, $command->getTime());
         $this->assertEquals($user, $command->getToken());
-        $this->assertEquals($data, $command->getData());
+        $this->assertEquals($payload, $command->getPayload());
 
-        foreach ($data as $key => $value) {
+        foreach ($payload as $key => $value) {
             $this->assertEquals($value, $command->get($key));
         }
 
