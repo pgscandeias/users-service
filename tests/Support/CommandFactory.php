@@ -8,7 +8,7 @@ use Candeias\Users\Entity\User;
 
 class CommandFactory
 {
-    public function create(array $values = [])
+    public static function create(array $values = [])
     {
         return new Command\Command(
             @$values['type'],
