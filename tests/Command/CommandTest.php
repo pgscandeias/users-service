@@ -43,7 +43,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
             [
                 Command::UPDATE,
                 new DateTime,
-                Support\TokenFactory::create(),
+                Support\TokenFactory::createUser(),
                 [
                     'username' => 'user',
                     'password' => 'pass',

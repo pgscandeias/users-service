@@ -7,7 +7,7 @@ use Candeias\Users\Security\UserToken;
 
 class TokenFactory
 {
-    public static function create()
+    public static function createUser()
     {
         return new UserToken('user');
     }
