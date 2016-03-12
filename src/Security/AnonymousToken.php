@@ -2,7 +2,7 @@
 
 namespace Candeias\Users\Security;
 
-class AnonymousToken extends Token
+class AnonymousToken implements Token
 {
 
 }

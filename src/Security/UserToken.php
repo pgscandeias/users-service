@@ -2,7 +2,7 @@
 
 namespace Candeias\Users\Security;
 
-interface Token
+class UserToken implements Token
 {
 
 }
