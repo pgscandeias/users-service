@@ -4,7 +4,7 @@ namespace Candeias\Users;
 
 use Candeias\Users\Event\Event;
 
-class UserAggregate
+class UserAggregate implements Aggregate
 {
     /**
      * @var Entity\User
