@@ -1,15 +1,4 @@
-FROM quay.io/hellofresh/php56
-
-#
-# php-mongo
-#
-
-RUN \
-    apt-get update && \
-    apt-get install -y \
-        curl \
-        php5-mongo
-
+FROM pgscandeias/php7-nginx
 
 #
 # filebeat
